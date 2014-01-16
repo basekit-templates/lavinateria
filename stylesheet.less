@@ -1,0 +1,865 @@
+/* 
+
+Table of Contents -
+
+  1. Default
+  2. Variable Media Queries
+  3. Custom CSS
+  4. Menu sections navigation
+  5. Header
+  6. Menu
+  7. Footer
+  8. SOCIAL BAR WIDGET / PROFILE DATA
+  9. IPHONE WIDTH
+*/
+
+/* ===============================
+   1. Default
+   =============================== */
+
+body {
+    background-color: @color-swatch1;
+    background-image: image('/images/texture.png');
+    font-family:@font-swatch5-font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+a {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@color-swatch3;
+    letter-spacing: @font-swatch5-letter-spacing;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+
+h1 {
+    font-family:@font-swatch1-font-family;
+    font-weight: @font-swatch1-font-weight;
+    color:@font-swatch1-color;
+    line-height:@font-swatch1-line-height;
+    letter-spacing: @font-swatch1-letter-spacing;
+    font-size: @font-swatch1-font-size;
+}
+
+h2 {
+    font-family:@font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    font-weight: @font-swatch2-font-weight;
+    line-height:@font-swatch2-line-height;
+    color: @font-swatch2-color;
+    letter-spacing: @font-swatch2-letter-spacing;
+}
+
+h3 {
+    font-family:@font-swatch3-font-family;
+    font-size:@font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    color: @font-swatch3-color;
+    line-height:@font-swatch3-line-height;
+    letter-spacing: @font-swatch3-letter-spacing;
+}
+
+h4 {
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+p {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+ol, li, ul {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight:@font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+}
+
+/* ===============================
+   2. VARIABLE MEDIA QUERIES
+   =============================== */
+
+@tablet: ~"only screen and (max-width: 768px)";
+@mobile: ~"only screen and (max-width: 320px)";
+
+/* ===============================
+   3. CUSTOM CSS
+   =============================== */
+
+
+/* ===============================
+   MENU SECTIONS NAVIGATION
+   =============================== */
+
+
+.widget.menusections {
+    text-align: center;
+    padding:0;
+    min-height: 30px;
+    @media @tablet {
+        border-bottom: none;
+        margin-top: 1.5em;
+    }
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin: 2.5em 0;
+        padding: 0;
+        @media @tablet {
+            /* Hidden until nav icon is clicked */
+            display: none;
+            /* Then these styles are applied */
+            width: 100%;
+            padding: 0;
+            border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+
+        }
+
+        /* ALIGN CENTER */
+        &.align-center {
+            li {
+                text-align: center;
+                &:hover {
+                    li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        /* ALIGN LEFT */
+        &.align-left {
+            li {
+                text-align: left;
+                &:hover {
+                    li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        /* ALIGN RIGHT */
+        &.align-right {
+            li {
+                text-align: right;
+                &:hover {
+                    li {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        li {
+            float: left;
+            display: block;
+            padding-right: 15px;
+            &:last-child {
+                border-bottom:none;
+            }
+            @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+            }
+
+            a {
+                display: block;
+                font-family:@font-swatch6-font-family;
+                font-size:@font-swatch6-font-size;
+                font-weight: @font-swatch6-font-weight;
+                color: @font-swatch6-color;
+                line-height:@font-swatch6-line-height;
+                letter-spacing: @font-swatch6-letter-spacing;
+                &:hover {
+                    color: @font-swatch6-color-hover;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    a {
+            &.menu-pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    &:after {
+                        content:"MENU";
+                        color: @font-swatch5-color;
+                        font-size: @font-swatch6-font-size;
+                        text-decoration: underline;
+                        width: 50px;
+                        height: 50px;
+                        top: 8px;
+                        left: 50%;
+                        margin-left:-25px;
+                        display: inline-block;
+                        position: absolute;
+                        border: none;
+                    }
+                }
+            }
+        }
+}
+
+/* ===============================
+   TOP SECTION
+   =============================== */
+
+.top-section {
+    width: 100%;
+    background-color: @color-swatch2;
+    text-align: center;
+    padding: 5px 0;
+    a {
+        color: @color-swatch1;
+        font-family:@font-swatch5-font-family;
+        font-size:bkscale(@font-swatch5-font-size,1.2);
+        font-weight: @font-swatch5-font-weight;
+        line-height:@font-swatch5-line-height;
+        letter-spacing: @font-swatch5-letter-spacing;
+
+    }
+}
+
+/* ===============================
+   5. HEADER
+   =============================== */
+
+header {
+
+ .companyheader {
+        margin-top: 3.5em;
+
+        .logo, .companyname {
+            text-align: center;
+        }
+
+        .companyname a {
+            display: block;
+            padding: 10px;
+            font-family: @font-swatch10-font-family;
+            font-weight: @font-swatch10-font-weight;
+            color: @font-swatch10-color;
+            line-height: @font-swatch10-line-height;
+            letter-spacing: @font-swatch10-letter-spacing;
+            font-size: @font-swatch10-font-size;
+                &:hover {
+                    text-decoration: none;
+                }
+                @media @mobile {
+                    font-size: bkscale(@font-swatch10-font-size,0.8);
+                    line-height: bkscale(@font-swatch10-line-height,0.8);
+                    padding-bottom: 20px;
+                }
+        } 
+
+    }/* end companyheader */
+
+    .widget.content {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        @media @mobile {
+            width: 100%;
+        }
+        p {
+            padding: 0;
+        }
+    }
+
+    .header-ornament {
+        margin-top: 1em;
+        background-image: image('/images/line.png');
+        background-repeat: no-repeat;
+        height: 20px;
+        background-position: center;
+    }
+
+    .clicktocall {
+        text-align: center;
+        margin-top: 20px;
+        @media @mobile {
+            margin-bottom: 60px;
+        }
+            a {
+                border: 2px solid @color-swatch3;
+                padding: 10px 13px;
+                font-family: @font-swatch5-font-family;
+                font-size: @font-swatch5-font-size;
+                color: @font-swatch5-color;
+                    &:hover {
+                        color: @color-swatch3;
+                        text-decoration: none;
+                    }
+            }
+    } /* end clicktocall */
+
+}   /* end header */
+
+/* ===============================
+   6. MENU
+   =============================== */
+
+.widget.menu {
+    width: 1024px;
+    margin:0 auto;
+    border: 3px solid @color-swatch2;
+    padding: 0;
+    &:before {
+       content: " ";
+       position: absolute;
+       top: 5px;
+       left: 5px;
+       right: 5px;
+       bottom: 5px;
+       border: 1px solid @color-swatch2;
+       @media @tablet {
+        border: none;
+        }
+    }
+    @media only screen and (max-width: 1084px) {
+        width: 90%;
+    }
+    @media @tablet {
+        border: none;
+        width:100%;
+    }
+
+    .main {
+        width: 960px;
+        padding-top: 30px;
+        margin: 0 auto;
+            @media only screen and (max-width: 1084px) {
+                width: 90%;
+            }
+            @media @tablet {
+                padding-top:5px;
+            }
+
+
+            ol, li {    /* removes list-style */
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            } 
+
+
+            /* MENU-HEADER AND SUB-SECTION HEADER */
+
+            .menu-header, .menu-subsection-header {
+                padding: 0 0 1.2em;
+                    @media @tablet {
+                        padding: 0.4em 0 0.75em;
+                    }
+                    h1 {    /* menu-name */
+                        text-align: center;
+                        overflow: hidden; 
+                    }
+                    h2 { /* MENU-SUBSECTION-HEADER */
+                        text-align: center;
+                        overflow: hidden; 
+                        &:after {
+                            content: "";
+                            background-image: image('/images/ornament-right.png');
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            height: 27px;
+                            width: 28px;
+                            margin: 0 10px;
+                            position: relative;
+                            top: 7px;
+                        }
+                        &:before {
+                            content: "";
+                            background-image: image('/images/ornament-left.png');
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            height: 27px;
+                            width: 28px;
+                            margin: 0 10px;
+                            position: relative;
+                            top: 7px;
+                        }
+                    }
+                    p {    /* description */
+                        text-align: center;       
+                    }  
+            }   /* end MENU-HEADER AND SUB-SECTION HEADER */
+            .menu-header {
+                @media @tablet {
+                    border-bottom:1px dotted rgba(0, 0, 0, 0.2);
+                    margin-bottom: 1.5em;
+                }
+            }
+            .menu-subsection-header {
+                @media only screen and (max-width: 550px) {
+                    border-bottom:1px dotted rgba(0, 0, 0, 0.2);
+                    padding-bottom: 1.5em;
+                }
+            }
+
+            /* ITEMS */
+
+            .menu-items { /* ol */
+                -moz-column-count: 2;
+                -moz-column-gap: 50px;
+                -moz-column-rule-color: rgba(0, 0, 0, 0.2);
+                -moz-column-rule-style:  dotted;
+                -moz-column-rule-width:  1px;
+
+                -webkit-column-count: 2;
+                -webkit-column-gap : 50px;
+                -webkit-column-rule-color:  rgba(0, 0, 0, 0.2);
+                -webkit-column-rule-style: dotted ;
+                -webkit-column-rule-width:  1px;
+
+                @media only screen and (max-width: 550px) {
+                   -moz-column-count: 1;
+                   -moz-column-gap: 50px;
+                   -webkit-column-count: 1;
+                   -webkit-column-gap : 50px;
+                }
+                
+                li {   /* menu-item */
+                    position: relative;
+                    display: inline-block;
+                    &.menu-item-promoted { /* menu-item-promoted */
+                        &:after { 
+                            content: "★";
+                            font-size: 25px;
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                            display: block;
+                            z-index: 9999999;
+                            color: @color-swatch7;
+                        }
+                        .inner-item h3 {
+                            padding-left: 30px;
+                        }
+                    }   /* end menu-item-promoted */
+
+                    .inner-item {
+                        display: inline-block;
+                        border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+                        padding-bottom: 30px;
+                        margin-bottom: 30px;
+                        h3 {    /* menu-item-name */  
+                            padding: 0 5px 0 0;
+                            font-family: @font-swatch3-font-family;
+                            color: @font-swatch3-color;
+                            float: left;
+                        }
+                        img {   /* menu-item-image */
+                            display: none;
+                            border: none;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            border-radius: 5px;
+                            width: 100%;
+                            margin-top: 5px;
+                        }
+                        .menu-item-price p {   /* standard-price */
+                            font-family:@font-swatch8-font-family;
+                            font-size:@font-swatch8-font-size;
+                            font-weight: @font-swatch8-font-weight;
+                            line-height:@font-swatch8-line-height;
+                            color: @color-swatch3;
+                            letter-spacing: @font-swatch8-letter-spacing;
+                            padding: 0px;
+                            margin: 0;
+                            display: inline-block;
+                        }
+                        p {    /* item-description */
+                            font-family:@font-swatch5-font-family;
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color:@font-swatch5-color;
+                            letter-spacing: @font-swatch5-letter-spacing;
+                            float: left;
+                            padding: 0;
+                        }
+                        h4  { /* nutritional-title for section and subsection */
+                            font-family:@font-swatch5-font-family;
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color: @color-swatch6;
+                            letter-spacing: @font-swatch5-letter-spacing;
+                            float: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .menu-item-nutritional-prop { 
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color: @font-swatch5-color;
+                            float: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .menu-section-item-dietary-props {
+                            float: left;
+                            width: 100%;
+                            margin-top: 10px;
+                            padding: 0;
+                            .dietary-icon {
+                                background-color: @color-swatch1;
+                                width: auto;
+                                height: 25px;
+                                border: 2px solid @color-swatch2;
+                                font-family:@font-swatch5-font-family;
+                                font-size:@font-swatch5-font-size;
+                                display: block;
+                                z-index: 9999999;
+                                color: @color-swatch3;
+                                float: left;
+                                margin-right: 5px;
+                            }
+                            .vegetarian-icon {
+                                &:after { 
+                                content: "veggie";
+                                padding: 7px;
+                                }
+                            }
+                            .vegetarian-icon {
+                                &:after { 
+                                content: "vegan";
+                                padding: 7px;
+                                }
+                            }
+                            .glutenFree-icon {
+                                &:after { 
+                                content: "gf";
+                                padding: 7px;
+                                }
+                            }
+                            .nutFree-icon {
+                                &:after { 
+                                content: "nf";
+                                padding: 7px;
+                                }
+                              }
+                            .dairyFree-icon {
+                                &:after { 
+                                content: "df";
+                                padding: 7px;
+                                }
+                              }
+                        } /* end menu-section-item-dietary-props */    
+
+                        .menu-item-description, .menu-subsection-item-description {
+                            margin-bottom: 0.5em;
+                            width: 100%;
+                        }
+
+                    }   /* end inner-item */
+
+                }  /* end li .menu-item */
+
+            }   /* end ol .menu-items */  
+
+            .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+                margin-bottom: 2em;
+                position: relative;
+                .menu-subsection-header {
+                    margin: 20px 0;
+                    text-align: center;
+
+                    h2 {
+                        color: @color-swatch7;
+                        &:before {
+                            content: "";
+                            background-image: image('/images/gold-ornament-left.png');
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            height: 27px;
+                            width: 28px;
+                            margin: 0 10px;
+                            position: relative;
+                            top: 7px;
+                        }
+                        &:after {
+                            content: "";
+                            background-image: image('/images/gold-ornament-right.png');
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            height: 27px;
+                            width: 28px;
+                            margin: 0 10px;
+                            position: relative;
+                            top: 7px;
+                        }
+                    }
+                }
+            } /* end PROMOTED SUB-SECTION */
+
+            .menu-info {
+                display: inline-block;
+                text-align: center;
+                margin: 2.5em 0;
+                padding: 20px;
+                width: 100%;
+                @media @tablet { 
+                    margin: 0;
+                    padding: 0px;
+                }
+                p {    /* menu-note */
+                    float: left;
+                    width: 100%;
+                    color: @color-swatch4;
+                    margin-bottom: 10px;
+                }
+                dl {    /* menu-dietary-key */
+                    display: inline-block;
+                    margin: 5px 0;
+                    text-align: block;
+                    dt, dd {
+                        display: inline-block;
+                    }
+                    dt {    /* dietary-icon */
+                        vertical-align: top; 
+                        width: 20px;
+                        height: 20px;
+                        background-size: 20px;
+                        background-color: @color-swatch3;
+                        border: 2px solid @color-swatch6;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .vegetarian-icon {
+                        background-image: image('/images/veggie-icon.png');
+                    }
+                    .glutenFree-icon {
+                        background-image: image('/images/gf-icon.png');
+                    }
+                    dd {    /* text for icon */
+                        font-family:@font-swatch5-font-family;
+                        font-size:@font-swatch5-font-size;
+                        font-weight: @font-swatch5-font-weight;
+                        line-height:@font-swatch5-line-height;
+                        color: @font-swatch5-color; 
+                        letter-spacing: @font-swatch5-letter-spacing;
+                        margin: 0 5px -7px;
+                    }   
+                }/* end dl */
+            }   /* end menu-info */
+    }/* end main */
+
+} /* end .widget.menu */
+
+/* ===============================
+   7. FOOTER
+  =============================== */
+
+footer {
+    padding: 3em 0;
+    margin-top: 3em;
+    background-color: @color-swatch2;
+    background-image:image('/images/texture.png');
+    background-repeat: repeat;
+
+    .widget.content {
+        width: 1024px;
+        margin:0 auto;
+        @media only screen and (max-width: 1084px) {
+             width: 90%;
+             margin: 0;
+        }
+        @media @tablet {
+            background-image: none;
+            width:100%;
+        }
+        p {
+            font-family: @font-swatch5-font-family;
+            color: @color-swatch1;
+            font-size: @font-swatch5-font-size;
+            font-weight: @font-swatch5-font-weight;
+            line-height:@font-swatch5-line-height;
+            letter-spacing: @font-swatch5-letter-spacing;
+        }
+    }
+}   /* end footer */ 
+
+
+/* ===============================
+   8. SOCIAL BAR WIDGET / PROFILE DATA
+   =============================== */
+
+.widget.profile .bk-profile-socialicons {
+    text-align: center;
+    margin: 1em;
+    font-size:1em;
+    font-family:@font-swatch7-font-family;
+    
+    a {
+        text-decoration: none;
+        text-indent: -9999px;
+        white-space: nowrap;
+        height: 33px;
+        width: 33px;
+        background-color: @color-swatch2;
+        background-size: 18px;
+        &:hover {
+            background-color: @color-swatch1;
+        }
+    }
+
+    span {
+        display: inline;
+        padding: 0;
+        font-size:1em;
+        font-family:@font-swatch7-font-family;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-indent: -9999px;
+            white-space: nowrap;
+            height: 38px;
+            width: 38px;
+            border: none;
+            background-position: center;
+            margin-bottom: 6px;
+            margin-right: 6px;
+            background-size: 20px;
+            border: 2px solid @color-swatch1;
+            background-repeat: no-repeat;
+            position: relative;
+            &:before {
+                    content: " ";
+                    position: absolute;
+                    height: 30px;
+                    width: 30px;
+                    top: 3px;
+                    left: 3px;
+                    right: 3px;
+                    bottom: 3px;
+                    border: 1px solid @color-swatch1;
+               }
+            &:hover {
+                background-color: darken(@color-swatch2,5%);
+            }
+        }
+    }
+}
+
+
+/* SVG ICONS */
+
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.svg');
+}
+
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.svg')
+}
+
+/* PNG ICONS */
+
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.png');
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.png')
+}
+
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.png')
+}
+
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.png')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.png')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.png')
+}
+
+
+
+
+
+/* ===============================
+   9. IPHONE WIDTH
+   =============================== */
+
+@media only screen and (max-width: 480px) {
+
+  /* UL ALIGN RIGHT */
+
+    .widget.extendednavigation ul.align-right li.folder {
+        background-position: 12px center;
+        padding-right: 0;
+    }
+    .widget .extendednavigation a.pull:after {
+        right: 48%;
+    }
+}
+

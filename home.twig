@@ -1,0 +1,36 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="top-section">
+{{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
+</div>
+
+<header>
+    <div class="wrapper clearfix">
+
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "LA VINATERIA"})|raw}}
+            {{widget('content', 'headercontent', {"content":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec eros non enim condimentum tristique. Fusce commodo lectus ac neque tristique auctor.</p>"})|raw}}
+            <div class="header-ornament"></div>
+        </div>
+        {{widget('menusections', 'menusections1', {})|raw}}
+       
+    </div><!--end wrapper clearfix-->
+</header>
+
+{{widget('menu', 'menu1', {})|raw}}
+
+
+
+<footer>
+    <div class="wrapper clearfix">
+        {{widget('content', 'footercolumn1content', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
+
+    
+</footer>
+
+{% endblock %}
