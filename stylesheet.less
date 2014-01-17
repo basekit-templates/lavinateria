@@ -116,7 +116,7 @@ ol, li, ul {
 
 
 /* ===============================
-   MENU SECTIONS NAVIGATION
+   4. MENU SECTIONS NAVIGATION
    =============================== */
 
 
@@ -252,7 +252,7 @@ ol, li, ul {
 }
 
 /* ===============================
-   5. HEADER
+   HEADER
    =============================== */
 
 header {
@@ -327,7 +327,7 @@ header {
 }   /* end header */
 
 /* ===============================
-   6. MENU
+   MENU
    =============================== */
 
 .widget.menu {
@@ -359,6 +359,10 @@ header {
         width: 960px;
         padding-top: 30px;
         margin: 0 auto;
+        display: none;
+        &.selected {
+            display: block;
+        }
             @media only screen and (max-width: 1084px) {
                 width: 90%;
             }
@@ -556,7 +560,7 @@ header {
                                 padding: 7px;
                                 }
                             }
-                            .vegetarian-icon {
+                            .vegan-icon {
                                 &:after { 
                                 content: "vegan";
                                 padding: 7px;
@@ -683,7 +687,7 @@ header {
 } /* end .widget.menu */
 
 /* ===============================
-   7. FOOTER
+   FOOTER
   =============================== */
 
 footer {
@@ -717,7 +721,7 @@ footer {
 
 
 /* ===============================
-   8. SOCIAL BAR WIDGET / PROFILE DATA
+   SOCIAL BAR WIDGET / PROFILE DATA
    =============================== */
 
 .widget.profile .bk-profile-socialicons {
@@ -780,86 +784,53 @@ footer {
 
 /* SVG ICONS */
 
-.svg .widget.socialicons span.bk-socialicons-twitter a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
     background-image: image('/images/social/socialicons-twitter.svg');
 }
 
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
     background-image: image('/images/social/socialicons-linkedin.svg')
 }
 
-.svg .widget.socialicons span.bk-socialicons-facebook a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
     background-image: image('/images/social/socialicons-facebook.svg')
 }
 
-.svg .widget.socialicons span.bk-socialicons-rss a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
     background-image: image('/images/social/socialicons-rss.svg')
 }
 
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
     background-image: image('/images/social/socialicons-googleplus.svg')
 }
 
-.svg .widget.socialicons span.bk-socialicons-youtube a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
     background-image: image('/images/social/socialicons-youtube.svg')
 }
 
 /* PNG ICONS */
 
-.widget.socialicons span.bk-socialicons-twitter a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
     background-image: image('/images/social/socialicons-twitter.png');
 }
 
-.widget.socialicons span.bk-socialicons-linkedin a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
     background-image: image('/images/social/socialicons-linkedin.png')
 }
 
-.widget.socialicons span.bk-socialicons-facebook a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
     background-image: image('/images/social/socialicons-facebook.png')
 }
 
-.widget.socialicons span.bk-socialicons-rss a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
     background-image: image('/images/social/socialicons-rss.png')
 }
 
-.widget.socialicons span.bk-socialicons-googleplus a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
     background-image: image('/images/social/socialicons-googleplus.png')
 }
 
-.widget.socialicons span.bk-socialicons-youtube a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
     background-image: image('/images/social/socialicons-youtube.png')
-}
-
-
-
-
-
-/* ===============================
-   9. IPHONE WIDTH
-   =============================== */
-
-@media only screen and (max-width: 480px) {
-
-  /* UL ALIGN RIGHT */
-
-    .widget.extendednavigation ul.align-right li.folder {
-        background-position: 12px center;
-        padding-right: 0;
-    }
-    .widget .extendednavigation a.pull:after {
-        right: 48%;
-    }
 }
 
