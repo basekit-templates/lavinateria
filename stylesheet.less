@@ -133,16 +133,6 @@ ol, li, ul {
         list-style: none;
         margin: 2.5em 0;
         padding: 0;
-        @media @tablet {
-            /* Hidden until nav icon is clicked */
-            display: none;
-            /* Then these styles are applied */
-            width: 100%;
-            padding: 0;
-            border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
-
-        }
-
         /* ALIGN CENTER */
         &.align-center {
             li {
@@ -183,12 +173,6 @@ ol, li, ul {
             &:last-child {
                 border-bottom:none;
             }
-            @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
-            }
-
             a {
                 display: block;
                 font-family:@font-swatch6-font-family;
@@ -204,31 +188,6 @@ ol, li, ul {
             }
         }
     }
-    a {
-            &.menu-pull {
-                display: none;
-                @media @tablet {
-                    display: block;
-                    width: 100%;
-                    position: absolute;
-                    top: 0;
-                    &:after {
-                        content:"MENU";
-                        color: @font-swatch5-color;
-                        font-size: @font-swatch6-font-size;
-                        text-decoration: underline;
-                        width: 50px;
-                        height: 50px;
-                        top: 8px;
-                        left: 50%;
-                        margin-left:-25px;
-                        display: inline-block;
-                        position: absolute;
-                        border: none;
-                    }
-                }
-            }
-        }
 }
 
 /* ===============================
