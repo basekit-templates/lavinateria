@@ -110,9 +110,9 @@
         },
         "font7": {
             "font-family": "\"PT Serif\", Georgia, serif",
-            "font-size": "18px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit",
             "background-color": "transparent",
