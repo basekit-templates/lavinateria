@@ -1,7 +1,7 @@
 {
     "name":"La Vinateria",
-    "thumbnail":"sycamore.png",
-    "screenshot":"sycamore.png",
+    "thumbnail":"lavinateria.png",
+    "screenshot":"lavinateria.png",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
@@ -19,40 +19,40 @@
             "color7":"#9a853d"
         },
         "Swatch 2": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#09d4b5",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#5A5955",
+            "color3":"#ac3133",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         },
         "Swatch 3": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#f3a41c",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#6d685d",
+            "color3":"#ac3133",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         },
         "Swatch 4": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#3b3b3b",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#6d685d",
+            "color3":"#ac3133",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#9553d9",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#6d685d",
+            "color3":"#ac3133",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         }
     },
     "fontSwatch": {
