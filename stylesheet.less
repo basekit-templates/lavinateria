@@ -122,10 +122,211 @@ ol, li, ul {
 @tablet: ~"only screen and (max-width: 768px)";
 @mobile: ~"only screen and (max-width: 320px)";
 
+
 /* ===============================
-   3. CUSTOM CSS
+   EXTENDED NAVIGATION
    =============================== */
 
+.widget {
+    .extendednavigation {
+        float: none;
+        position: relative;
+        max-width: 100%;
+        min-height: 40px;
+        background-color: @color-swatch2;
+        li {
+            ul {
+                display: none !important;
+            }
+        }
+        ul {
+            display: table;
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4px 0 0 0;
+            @media @tablet {
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
+                width: 100%;
+                border-top: 1px solid @color-swatch2;
+                margin: 0;
+                padding: 40px 0 0;
+            }
+            li {
+                float: left;
+                display: block;
+                padding: 5px 0;
+                @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch2;
+                    background-color: @color-swatch1;
+                    background-image:image('/images/texture.png');
+                }
+                &:last-child {
+                    @media @tablet {
+                        border-bottom: 1px solid @color-swatch2;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        display: block !important;
+                        position: absolute;
+                        background-color: @color-swatch1;
+                        background-image:image('/images/texture.png');
+                        border: 1px solid @color-swatch2;
+                        z-index: 500;
+                        padding: 0;
+                        margin: 0 0 0;
+                        @media @tablet {
+                            background-color: @color-swatch1;
+                            background-image:image('/images/texture.png');
+                        }
+                        li {
+                            display: block;
+                            width: 100%;
+                                .box-sizing {
+                                    a {
+                                        display: block;
+                                        color: @color-swatch5;
+                                        padding: 0;
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0 15px;
+                    font-family: @font-swatch6-font-family;
+                    font-size: @font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @color-swatch1;
+                    line-height: @font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    &:hover {
+                        color: @color-swatch1;
+                        text-decoration: underline;
+                        @media @tablet {
+                            color: @color-swatch5;
+                        }
+                    }
+                    @media @tablet {
+                        color: @color-swatch5;
+                    }
+                }
+
+                &.folder {
+                    /* Folder dropdown arrow BG style goes Here */  
+                    margin-right: 20px;            
+                    cursor: pointer;
+                    background-image: none;
+                    @media @tablet {
+                        background-image:image('/images/texture.png');
+                        background-repeat: repeat;
+                        background-position: center;
+                    }
+                    .text {
+                        display: block;
+                        padding: 0 15px;
+                        font-family: @font-swatch6-font-family;
+                        font-size: @font-swatch6-font-size;
+                        font-weight: @font-swatch6-font-weight;
+                        color: @color-swatch1;
+                        line-height: @font-swatch6-line-height;
+                        letter-spacing: @font-swatch6-letter-spacing;
+                        position: relative;
+                        &:after {
+                            content: "\25BC";
+                            font-size: 5px;
+                            position: absolute;
+                            top: 1px;
+                            display: block;
+                            z-index: 9999999;
+                            right: 0;
+                            color: @color-swatch1;
+                            @media @tablet {
+                                font-size: 10px;
+                                color: @color-swatch5;
+                                padding-right: 10px;
+                            }
+                        }
+                        @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        &:hover {
+                            color: @color-swatch1;
+                            text-decoration: underline;
+                            @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        }
+                    }
+                    ul {
+                        padding: 0;
+                        @media @tablet {
+                            margin-top: 14px;
+                            background-color: @color-swatch1;
+                            background-image:image('/images/texture.png');
+                        }
+                        li {
+                            a {
+                                .text {
+                                    padding: 0;
+                                    color: @color-swatch5;
+                                    &:hover {
+                                        text-decoration:underline;
+                                        color: @color-swatch5;
+                                    }
+                                    &:after {
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        a {
+           &.pull {
+               display: none;
+               @media @tablet {
+                   display: block;
+                   margin: 0;
+                   width: 20px;
+                   height: 44px;
+                   position: absolute;
+                   top: -3px;
+                   left: 48.5%;
+                   &:hover {
+                       cursor: pointer;
+                   }
+                   &:after {
+                       content: '';
+                       position: absolute;
+                       width: 100%;
+                       height: 3px;
+                       background: @color-swatch1;
+                       top: 15px;
+                       left: 0;
+                       box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+                   }
+               }
+           }
+       }
+    }
+}
+
+.widget .extendednavigation ul li.folder:after {
+    display: none;
+}
 
 /* ===============================
    4. MENU SECTIONS NAVIGATION
@@ -209,49 +410,6 @@ ol, li, ul {
         }
     }
 }
-/* ===============================
-   TOP SECTION
-   =============================== */
-
-.top-section {
-    width: 100%;
-    background-color: @color-swatch2;
-    text-align: center;
-    padding: 5px 0;
-    .widget {
-        &.clicktocall {
-            text-align: center;
-            a {
-                border: none;
-                padding: 10px 13px;
-                font-family: @font-swatch3-font-family;
-                font-size: @font-swatch3-font-size;
-                color: @color-swatch1;
-                border: none;
-                &:hover {
-                    color: @color-swatch1;
-                    text-decoration: underline;
-                    border:none;
-                    background: transparent;
-                    @media @mobile {
-                        background-image: image('/images/ic-call-white.png');
-                        background-repeat: no-repeat;
-                        background-size: 12px;
-                        padding:10px 10px 10px 21px;
-                        background-position: left;
-                    }
-                }
-                @media @mobile {
-                    background-image: image('/images/ic-call-white.png');
-                    background-repeat: no-repeat;
-                    background-size: 12px;
-                    padding:10px 10px 10px 21px;
-                    background-position: left;
-                }
-            }
-        } /* end clicktocall */
-    }/* end widget */
-}/* end top section */
 
 
 /* ===============================
@@ -259,14 +417,11 @@ ol, li, ul {
    =============================== */
 
 header {
-
  .companyheader {
         margin-top: 3.5em;
-
         .logo, .companyname {
             text-align: center;
         }
-
         .companyname a {
             display: block;
             padding: 10px;
@@ -285,7 +440,6 @@ header {
                     padding-bottom: 20px;
                 }
         } 
-
     }/* end companyheader */
 
     .widget.content {
@@ -571,54 +725,7 @@ header {
                                 margin-left: 1px;
                                 padding: 0 7px 2px;
                             }
-                            .vegetarian-icon {
-                                    &:before { 
-                                    content: "veggie";
-                                    }
-                                }
-                                .vegan-icon {
-                                    &:before { 
-                                    content: "vegan";
-                                    }
-                                }
-                                .glutenfree-icon {
-                                    &:before { 
-                                    content: "gf";
-                                    }
-                                }
-                                .nutfree-icon {
-                                    &:before { 
-                                    content: "nf";
-                                    }
-                                  }
-                                .dairyfree-icon {
-                                    &:before { 
-                                    content: "df";
-                                    }
-                                  }
-
-                                .not-spicy-icon {
-                                    display: none;
-                                  }
-
-                                .spicy-icon {
-                                    &:before { 
-                                    content: "mild";
-                                    }
-                                  }
-
-                                .medium-spicy-icon {
-                                    &:before { 
-                                    content: "medium";
-                                    }
-                                  }
-
-                                .hot-icon {
-                                    &:before { 
-                                    content: "hot";
-                                    }
-                                  }
-                            } /* end menu-section-item-dietary-props */   
+                        } /* end menu-section-item-dietary-props */   
 
 
                         .menu-item-description, .menu-subsection-item-description {
