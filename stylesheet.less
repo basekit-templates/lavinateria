@@ -664,6 +664,7 @@ ol, li, ul {
                         border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
                         padding-bottom: 30px;
                         margin-bottom: 30px;
+                        width: 100%;
                         h3 {    /* menu-item-name */  
                             padding: 0 5px 0 0;
                             font-family: @font-swatch3-font-family;
@@ -727,7 +728,7 @@ ol, li, ul {
                         .menu-section-item-dietary-props {
                             float: left;
                             width: 100%;
-                            margin-top: 10px;
+                            margin-top: 0px;
                             padding: 0;
                             .dietary-icon {
                                 background-color: @color-swatch1;
@@ -742,6 +743,7 @@ ol, li, ul {
                                 margin-right: 5px;
                                 margin-bottom: 5px;
                                 margin-left: 1px;
+                                margin-top: 0;
                                 padding: 0 7px 2px;
                             }
                         } /* end menu-section-item-dietary-props */   
@@ -1018,6 +1020,13 @@ ol, li, ul {
     border-radius: 50px;
 }
 
+.bk-footer .widget.profile .bk-profile-socialicons .icons span a, .bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.socialicons .icons span a, .bk-footer .widget.socialicons span a {
+    border: none;
+        -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
 .bk-footer .widget.socialicons .icons {
     text-align: center;
     margin: 1em;
@@ -1085,7 +1094,6 @@ hr {
     background-color: @color-swatch2;
     background-image:image('/images/texture.png');
     background-repeat: repeat;
-
     .widget.content {
         width: 1024px;
         margin:0 auto;
@@ -1100,7 +1108,7 @@ hr {
         }
         p {
             font-family: @font-swatch5-font-family;
-            color: darken(@color-swatch4,20%);
+            color: @color-swatch1;
             font-size: @font-swatch5-font-size;
             font-weight: @font-swatch5-font-weight;
             line-height:@font-swatch5-line-height;
