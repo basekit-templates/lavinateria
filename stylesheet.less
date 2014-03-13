@@ -1160,8 +1160,15 @@ hr {
    =============================== */
 .print-mixin {
 	.widget.menu,
-	.widget.menu:before {
-		border-color: #b9b9b9;
+	.widget.menu:before,
+	.widget.menu .main .menu-items li .inner-item,
+	.widget.menu .main .menu-items li .inner-item .menu-section-item-dietary-props .dietary-icon {
+		border: none !important;
+	}
+	.widget.menu .main .menu-items {
+		-webkit-column-rule-style: solid;
+		-moz-column-rule-style: solid;
+		column-rule-style: solid;
 	}
 	.widget.menu .main .menu-items li.menu-item-promoted:after {
 		color: #b9b9b9;
