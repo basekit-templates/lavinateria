@@ -1,11 +1,11 @@
 {
     "name":"La Vinateria",
-    "thumbnail":"sycamore.png",
-    "screenshot":"sycamore.png",
+    "thumbnail":"lavinateria.png",
+    "screenshot":"lavinateria.png",
     "tags": {
-    "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
-    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
-    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+    "en": ["menu", "cafe", "bar", "restaurant"],
+    "es": ["menú", "cafetería", "bar", "restaurante"],
+    "br": ["menu", "cafeteria", "bar", "restaurante"]
     },
     "colorSwatches":
     {
@@ -19,40 +19,40 @@
             "color7":"#9a853d"
         },
         "Swatch 2": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#09d4b5",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#9F9B94",
+            "color3":"#D8520F",
+            "color4":"#5A5955",
+            "color5":"#5A5955",
+            "color6":"#5A5955",
+            "color7":"#9a853d"
         },
         "Swatch 3": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#f3a41c",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#6d685d",
+            "color3":"#6d685d",
+            "color4":"#2F170A",
+            "color5":"#6D6B6B",
+            "color6":"#555555",
+            "color7":"#9a853d"
         },
         "Swatch 4": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#3b3b3b",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#878379",
+            "color3":"#52708E",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#9553d9",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f3efe6",
+            "color2":"#847F76",
+            "color3":"#C86A9D",
+            "color4":"#555555",
+            "color5":"#555555",
+            "color6":"#555555",
+            "color7":"#9a853d"
         }
     },
     "fontSwatch": {
@@ -110,9 +110,9 @@
         },
         "font7": {
             "font-family": "\"PT Serif\", Georgia, serif",
-            "font-size": "18px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit",
             "background-color": "transparent",
