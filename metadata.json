@@ -2,6 +2,7 @@
     "name":"La Vinateria",
     "thumbnail":"lavinateria.png",
     "screenshot":"lavinateria.png",
+    "templateType":"menu",
     "tags": {
     "en": ["menu", "cafe", "bar", "restaurant"],
     "es": ["menú", "cafetería", "bar", "restaurante"],
